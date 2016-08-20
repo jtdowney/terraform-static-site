@@ -25,3 +25,4 @@ Outputs:
 
 * `name_servers` - the name servers from Route53 to configure your domain name with.
 * `origin_bucket` - S3 bucket to put your static site content in.
+* `cloudfront_distribution` - CloudFront distribution ID, this is useful for configuring cache invalidation in your site deployment tools (e.g. [s3\_website](https://github.com/laurilehmijoki/s3_website))

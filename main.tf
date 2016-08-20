@@ -12,6 +12,10 @@ output "origin_bucket" {
   value = "${aws_s3_bucket.origin.bucket}"
 }
 
+output "cloudfront_distribution" {
+  value = "${aws_cloudfront_distribution.distribution.id}"
+}
+
 provider "aws" {
   region = "us-east-1"
 }
