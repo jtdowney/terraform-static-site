@@ -8,6 +8,10 @@ output "name_servers" {
   value = "${aws_route53_zone.zone.name_servers}"
 }
 
+output "origin_bucket" {
+  value = "${aws_s3_bucket.origin.bucket}"
+}
+
 provider "aws" {
   region = "us-east-1"
 }

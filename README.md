@@ -24,3 +24,4 @@ Optional variables:
 Outputs:
 
 * `name_servers` - the name servers from Route53 to configure your domain name with.
+* `origin_bucket` - S3 bucket to put your static site content in.
