@@ -6,7 +6,7 @@ Terraform code to spin up a static site using Amazon's S3, CloudFront, Route53, 
 
 * You want HTTPS everywhere
 * You want a naked top level domain that serves content
-* You want www. to redirect to the top level domain
+* You want a www subdomain to redirect to the top level domain
 * You're ok with SNI for HTTPS (avoids an expensive dedicated IP fee)
 
 ## Usage
@@ -15,7 +15,7 @@ Required variables:
 
 * AWS Access Key ID and Secret Access Key - These are assumed to be in your environment. If you're on macOS, I highly recommend checking out [envchain](https://github.com/sorah/envchain) for securely storing the environment variables.
 * `site_domain` - the naked top level domain to use (e.g. jtdowney.com)
-* `certificate_arn` - the ARN from AWS Certificate Manager, this must be requested in the AWS console due to the verification step. Also, the certificate must be in the us-east-1 region or it won't work.
+* `certificate_arn` - the ARN from AWS Certificate Manager, this must be requested in the AWS console due to the verification step. You need to add both the top level domain and the www subdomain to the same certificate. Also, the certificate must be in the us-east-1 region or it won't work.
 
 Optional variables:
 
